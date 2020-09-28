@@ -7,7 +7,7 @@ class Show < ActiveRecord::Base
   self.actors.map {|a|"#{a.full_name}"}
   end 
    
-  def build_network(netwrk)
-    self.network = Network.find_or_create_by(netwrk)
-  end
+  # def build_network(netwrk)
+  #   self.network = Network.find_or_create_by(netwrk)
+  # end
 end
