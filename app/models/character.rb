@@ -13,13 +13,9 @@ class Character < ActiveRecord::Base
   #   self
   # end
   
-  # def build_network(call_letters:)
-  #   network = Network.create(call_letters: call_letters)
-  #   self.show.network_id = network.id
-  #   show.save
+  
+  # def build_show(shw)
+  #   self.show = Show.find_or_create_by(shw)
   # end
-  def build_show(shw)
-    self.show = Show.find_or_create_by(shw)
-  end
 
 end
