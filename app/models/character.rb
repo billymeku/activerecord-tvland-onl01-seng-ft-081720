@@ -18,8 +18,8 @@ class Character < ActiveRecord::Base
   #   self.show.network_id = network.id
   #   show.save
   # end
-  # def build_show(shw)
-  #   self.show = Show.find_or_create_by(shw)
-  # end
+  def build_show(shw)
+    self.show = Show.find_or_create_by(shw)
+  end
 
 end
