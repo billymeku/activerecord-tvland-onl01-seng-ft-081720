@@ -10,9 +10,10 @@ class Show < ActiveRecord::Base
   # def build_network(netwrk)
   #   self.network = Network.find_or_create_by(netwrk)
   # end
+  
   def build_network(call_letters:)
     network = Network.create(call_letters: call_letters)
     self.show.network_id = network.id
-    show.save
+    self.show.save
   end
 end
